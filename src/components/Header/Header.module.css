@@ -18,7 +18,6 @@
 .links {
   display: flex;
   gap: 1.5rem;
-
   list-style: none;
 }
 
@@ -29,6 +28,13 @@
   transition: color 0.2s ease;
 }
 
-.links li:hover {
+.links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
   color: #cfcfcf;
 }
