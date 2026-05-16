@@ -2,6 +2,10 @@
    PRODUCT CARD
 ========================= */
 
+a {
+    text-decoration: none;
+}
+
 .card {
   background-color: #1a1a1a;
 
@@ -14,6 +18,7 @@
   gap: 1rem;
 
   min-height: 420px;
+  height: 80%;
 
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
