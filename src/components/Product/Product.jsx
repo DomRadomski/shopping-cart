@@ -14,6 +14,23 @@ function Product({ id, image, name, description, price, updateBasket }) {
           <span className={styles.price}>
             £{price}
           </span>
+          {/* Quantity selector */}
+        <div className={styles.quantityWrapper}>
+            <label className={styles.quantityLabel}>Qty</label>
+
+            <select
+                className={styles.quantitySelect}
+                value={quantity}
+                onChange={(e) => setQuantity(Number(e.target.value))}
+                onClick={(e) => e.stopPropagation()}
+            >
+                {[...Array(10)].map((_, i) => (
+                <option key={i + 1} value={i + 1}>
+                    {i + 1}
+                </option>
+                ))}
+            </select>
+        </div>
           <button className={styles.button} onClick={(e) => updateBasket(e, id)}>
             Add to Basket
           </button>

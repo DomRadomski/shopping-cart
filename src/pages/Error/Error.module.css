@@ -1,0 +1,82 @@
+.errorPage {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffffff;
+  padding: 3rem;
+
+  color: white;
+  border: 12px solid white; /* because subtlety is overrated */
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #111;
+
+  padding: 3rem 2.5rem;
+
+  border: 1px solid #2a2a2a;
+
+  max-width: 600px;
+  width: 100%;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+.errorBox {
+  background-color: #1a1a1a;
+
+  padding: 1rem;
+
+  border: 1px solid #333;
+
+  color: #ff6b6b;
+
+  font-family: monospace;
+  font-size: 0.95rem;
+
+  word-break: break-word;
+}
+
+.button {
+  margin-top: 1rem;
+
+  padding: 0.9rem 1.5rem;
+
+  background-color: white;
+  color: black;
+
+  border: none;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  background-color: #d9d9d9;
+}

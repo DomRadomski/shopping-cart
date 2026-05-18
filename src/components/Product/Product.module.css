@@ -117,3 +117,41 @@ a {
 .button:hover {
   background-color: #d9d9d9;
 }
+
+.quantityWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-top: 0.5rem;
+}
+
+.quantityLabel {
+  font-size: 0.9rem;
+  color: #bdbdbd;
+}
+
+.quantitySelect {
+  background-color: #2a2a2a;
+  color: white;
+
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+
+  padding: 0.4rem 0.6rem;
+
+  font-size: 0.9rem;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.quantitySelect:hover {
+  border-color: #5a5a5a;
+}
+
+.quantitySelect:focus {
+  outline: none;
+  border-color: white;
+}

@@ -1,0 +1,156 @@
+.home {
+  background-color: #ffffff;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding-top: .5rem;
+}
+
+/* Shared Section Styling */
+.hero,
+.about,
+.banner,
+.newsletter {
+  background-color: #111;
+
+  padding: 4rem 3rem;
+
+  border: 1px solid #2a2a2a;
+}
+
+/* Hero */
+.hero {
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.hero p {
+  max-width: 700px;
+
+  font-size: 1.1rem;
+  line-height: 1.7;
+
+  color: #cfcfcf;
+}
+
+.hero button,
+.banner button,
+.newsletter button {
+  width: fit-content;
+
+  padding: 0.9rem 1.8rem;
+
+  border: none;
+
+  background-color: white;
+  color: black;
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.hero button:hover,
+.banner button:hover,
+.newsletter button:hover {
+  background-color: #d9d9d9;
+}
+
+/* About */
+.about h2,
+.banner h2,
+.newsletter h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 2rem;
+}
+
+.about-card {
+  background-color: #1a1a1a;
+
+  padding: 2rem;
+
+  border: 1px solid #2f2f2f;
+}
+
+.about-card h3 {
+  margin-bottom: 1rem;
+
+  font-size: 1.3rem;
+}
+
+.about-card p {
+  color: #bdbdbd;
+
+  line-height: 1.6;
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.banner p {
+  max-width: 700px;
+
+  color: #cfcfcf;
+  line-height: 1.7;
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.newsletter p {
+  color: #cfcfcf;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 250px;
+
+  padding: 1rem;
+
+  border: 1px solid #333;
+
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: white;
+}
