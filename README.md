@@ -4,7 +4,7 @@ A simple React shopping cart application built with React Router, dynamic produc
 
 ## Live Demo
 
-View the full deployed project [Here](https://shopping-cart-jet-six.vercel.app)
+View the full deployed project [here](https://shopping-cart-jet-six.vercel.app)
 
 ## Features
 
