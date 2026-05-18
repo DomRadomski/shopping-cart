@@ -75,7 +75,7 @@ function Basket() {
 
           <div className={styles.total}>
             <span>Total</span>
-            <strong>£{calcTotal(basket)}</strong>
+            <strong>£{calcTotal(basket).toFixed(2)}</strong>
           </div>
 
           <button className={styles.checkout}>
