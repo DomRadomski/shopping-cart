@@ -11,20 +11,13 @@ function Basket() {
   };
 
   const removeFromBasket = (id) => {
-    setBasket((prev) => {
-        const index = prev.indexOf(id);
-        if (index === -1) return prev;
-
-        const copy = [...prev];
-        copy.splice(index, 1);
-        return copy;
-    });
+    setBasket((prev) => prev.filter(item => item.id !== id));
   };
 
   const calcTotal = (items) => {
-    return items.reduce((total, id) => {
-        const product = getProductById(id);
-        return total + (product?.price || 0);
+    return items.reduce((total, item) => {
+        const product = getProductById(item.id);
+        return total + (product?.price || 0) * item.quantity;
     }, 0);
   };
 
@@ -54,23 +47,23 @@ function Basket() {
           </thead>
 
           <tbody>
-            {basket.map((id, index) => {
-                const product = getProductById(id);
+            {basket.map((item) => {
+                const product = getProductById(item.id);
 
                 if (!product) return null;
 
                 return (
-                    <BasketItem
-                        key={index}
-                        id={product.id}
-                        name={product.title}
-                        quantity={1}
-                        total={product.price}
-                        removeFromBasket={removeFromBasket}
-                    />
-                    );
-                })}
-            </tbody>
+                <BasketItem
+                    key={item.id}
+                    id={product.id}
+                    name={product.title}
+                    quantity={item.quantity}
+                    total={product.price * item.quantity}
+                    removeFromBasket={removeFromBasket}
+                />
+                );
+            })}
+          </tbody>
 
         </table>
 

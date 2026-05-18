@@ -1,6 +1,6 @@
 import styles from './Shop.module.css'
 import Product from '@/components/Product/Product';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Outlet, useOutletContext } from 'react-router';
 
 function Shop() {
@@ -8,6 +8,10 @@ function Shop() {
   const [filter, setFilter] = useState("all");
   const { basket, setBasket, products } = useOutletContext();
   
+  useEffect(() => {
+    console.table(basket);
+    }, [basket]);
+
   const categories = [
     "all",
     "electronics",
@@ -22,14 +26,23 @@ function Shop() {
     setFilter((prev) => (prev === newFilter ? "all" : newFilter));
   };
 
-  const updateBasket = (e, id) => {
-    e.stopPropagation();
-    e.preventDefault(); // important if it's inside a Link
+  const updateBasket = (id, quantity) => {
 
-    setBasket((prev) => [...prev, id]);
-    console.table(basket);
+    setBasket((prev) => {
+        const existing = prev.find(item => item.id === id);
 
-  };
+        if (existing) {
+            return prev.map(item =>
+            item.id === id
+                ? { ...item, quantity: item.quantity + quantity }
+                : item
+            );
+        }
+
+        return [...prev, { id, quantity: quantity }];
+    });
+
+    };
 
   return (
     <>

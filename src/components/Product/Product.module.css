@@ -63,6 +63,7 @@ a {
   font-size: 1.1rem;
   font-weight: 700;
   color: white;
+  height: 75px;
 
   line-height: 1.4;
 
@@ -155,3 +156,4 @@ a {
   outline: none;
   border-color: white;
 }
+

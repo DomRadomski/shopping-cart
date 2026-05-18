@@ -171,3 +171,48 @@
     height: 300px;
   }
 }
+
+.quantityWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 0.75rem 1rem;
+
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+
+  background-color: #141414;
+}
+
+.quantityLabel {
+  font-size: 0.9rem;
+  color: #bdbdbd;
+
+  letter-spacing: 0.5px;
+}
+
+.quantitySelect {
+  background-color: #1f1f1f;
+  color: white;
+
+  border: 1px solid #333;
+
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+
+  font-size: 0.95rem;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.quantitySelect:hover {
+  border-color: #555;
+}
+
+.quantitySelect:focus {
+  outline: none;
+  border-color: white;
+}
