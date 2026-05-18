@@ -3,7 +3,7 @@ import styles from "./ProductModal.module.css";
 
 function ProductModal() {
   const { id } = useParams();
-  const { products } = useOutletContext();
+  const { products, updateBasket } = useOutletContext();
 
   const product = products.find((p) => p.id === Number(id));
 
@@ -34,7 +34,7 @@ function ProductModal() {
                 £{product.price}
             </span>
 
-            <button className={styles.button}>
+            <button className={styles.button} onClick={(e) => updateBasket(e, product.id)}>
                 Add to Basket
             </button>
             </div>

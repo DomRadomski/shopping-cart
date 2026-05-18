@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "./Product.module.css";
 
-function Product({ id, image, name, description, price }) {
+function Product({ id, image, name, description, price, updateBasket }) {
+
   return (
     <Link to={`/shop/${id}`}>
       <div className={styles.card}>
@@ -13,7 +14,7 @@ function Product({ id, image, name, description, price }) {
           <span className={styles.price}>
             £{price}
           </span>
-          <button className={styles.button}>
+          <button className={styles.button} onClick={(e) => updateBasket(e, id)}>
             Add to Basket
           </button>
       </div>
