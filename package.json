@@ -8,7 +8,6 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-
     "clean": "rimraf node_modules package-lock.json",
     "reinstall": "npm run clean && npm install"
   },
