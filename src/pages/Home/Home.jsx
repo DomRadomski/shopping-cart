@@ -1,4 +1,5 @@
-import styles from "./Home.module.css"
+import styles from "./Home.module.css";
+import { Link } from "react-router";
 
 function Home() {
     return (
@@ -12,7 +13,7 @@ function Home() {
                     carefully designed to look excellent in muted Instagram posts.
                 </p>
 
-                <button>Start Shopping</button>
+                <Link to='/shop'><button>Start Shopping</button></Link>
             </section>
 
             <section className={styles.about}>

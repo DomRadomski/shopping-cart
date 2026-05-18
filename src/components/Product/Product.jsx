@@ -10,7 +10,6 @@ function Product({ id, image, name, description, price, updateBasket }) {
     e.preventDefault();
     e.stopPropagation();
     updateBasket(id, quantity);
-    alert('Added item(s) to basket')
   };
 
   return (

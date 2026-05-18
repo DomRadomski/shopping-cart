@@ -28,6 +28,8 @@ function Shop() {
 
   const updateBasket = (id, quantity) => {
 
+    alert('Added item(s) to basket')
+
     setBasket((prev) => {
         const existing = prev.find(item => item.id === id);
 
